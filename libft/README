@@ -1,0 +1,7 @@
+1. ft_putchar(char c) - print char character
+
+2. ft_putstr(char const *c) - print string
+
+3. ft_strclr(char *s) - cleared the string
+
+4. 
