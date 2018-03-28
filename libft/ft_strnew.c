@@ -1,24 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   ft_strnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ikoloshy <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/03/27 16:01:59 by ikoloshy          #+#    #+#             */
-/*   Updated: 2018/03/28 19:22:19 by ikoloshy         ###   ########.fr       */
+/*   Created: 2018/03/28 19:29:17 by ikoloshy          #+#    #+#             */
+/*   Updated: 2018/03/28 21:19:18 by ikoloshy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putstr(char const *s)
+char	*ft_strnew(size_t size)
 {
-	int	index;
+	char	*temp;
 
-	index = 0;
-	if (!s)
-		return ;
-	while (s[index] != '\0')
-		ft_putchar(s[index++]);
+	temp = ft_memalloc(size + 1);
+	return (temp);
 }
