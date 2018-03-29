@@ -1,7 +1,19 @@
-1. ft_putchar(char c) - print char character
+1. void ft_putchar(char c) - print char character
 
-2. ft_putstr(char const *c) - print string
+2. void ft_putstr(char const *c) - print string
 
-3. ft_strclr(char *s) - cleared the string
+3. void ft_strclr(char *s) - cleared the string
 
-4. 
+4. void ft_memalloc(size_t size) - allocates area and set its by zero
+
+5. void ft_bzero(void *s, size_t n) - fill area by 0 bites
+
+6. void ft_memdel(void **ap) - freed the memory area
+
+7. char	ft_strnew(size_t size) - allocate memorey for string with ending of it and fill all by zero
+
+8. void	ft_strdel(char **as) - freed the string
+
+9. int ft_strequ(char const *s1, char const *s2) - compaire strings, return 1(equal) or 0(not equal)
+
+10. int ft_strnequ(char const *s1, char const *s2, size_t n) - compaire n characters from strings, return 1(equal) or 0(not equal)
