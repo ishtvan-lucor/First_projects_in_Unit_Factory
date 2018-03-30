@@ -1,22 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_strcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ikoloshy <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/03/27 19:29:46 by ikoloshy          #+#    #+#             */
-/*   Updated: 2018/03/30 19:23:33 by ikoloshy         ###   ########.fr       */
+/*   Created: 2018/03/30 22:42:25 by ikoloshy          #+#    #+#             */
+/*   Updated: 2018/03/30 23:06:15 by ikoloshy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_bzero(void *s, size_t n)
+char	*ft_strcpy(char *dst, const char *src)
 {
-	char	*p;
+	size_t	index;
 
-	p = (char*)s;
-	while (n--)
-		*p++ = '\0';
+	index = 0;
+	while (dst[index] != '\0' && src[index] != '\0')
+	{
+		dst[index] = src[index];
+		index++;
+	}
+	dst[index] = src[index];
+	return (dst);
 }

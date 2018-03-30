@@ -6,7 +6,7 @@
 /*   By: ikoloshy <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/26 20:40:26 by ikoloshy          #+#    #+#             */
-/*   Updated: 2018/03/29 19:49:40 by ikoloshy         ###   ########.fr       */
+/*   Updated: 2018/03/30 22:52:37 by ikoloshy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,26 +77,64 @@ int	main(int argc, char **argv)
 			ft_strclr(argv[2]);
 			printf("The needed string here: %s\n", argv[2]);
 		}
+		/*ft_strlen(const char *s)*/
+		else if (strcmp(argv[1], "ft_strlen") == 0)
+		{
+			printf("original: %zu\n", strlen(argv[2]));
+			printf("my funct: %zu\n", ft_strlen(argv[2]));
+		}
 	}
 	else if (argc == 4)
 	{
 		/* ft_bzero(void *s, size_t n);*/
 		if (strcmp(argv[1], "ft_bzero") == 0)
 		{
-			bzero(argv[2], (size_t)atoi(argv[3]));
-			printf("orgin bzero: %s\n", argv[2]);
+			//bzero(argv[2], (size_t)atoi(argv[3]));
+			//printf("orgin bzero: %s\n", argv[2]);
 			ft_bzero(argv[2], (size_t)atoi(argv[3]));
 			printf("my ft_bzero: %s", argv[2]);
 		}
 		/*ft_strequ(char const *s1, char const *s2)*/
-		if (strcmp(argv[1], "ft_strequ") == 0)
+		else if (strcmp(argv[1], "ft_strequ") == 0)
 			printf("result: %d\n", ft_strequ(argv[2], argv[3]));
+		/*ft_strcpy(char *dst, const char *src)*/
+		else if (strcmp(argv[1], "ft_strcpy") == 0)
+		{
+			printf("original: %s\n", strcpy(argv[2], argv[3]));
+			printf("my funct: %s\n", ft_strcpy(argv[2], argv[3]));
+		}
 	}
 	else if (argc == 5)
 	{
 		/*ft_strnequ(char const *s1, char const *s2, size_t n)*/
 		if (strcmp(argv[1], "ft_strnequ") == 0)
 			printf("Result: %d\n", ft_strnequ(argv[2], argv[3], (size_t)atoi(argv[4])));
+		else if (strcmp(argv[1], "ft_memset") == 0)
+		{
+			printf("original:%s\n", memset(argv[2], (int)atoi(argv[3]), (size_t)atoi(argv[4])));
+			printf("my func:%s\n", ft_memset(argv[2], (int)atoi(argv[3]), (size_t)atoi(argv[4])));
+		}
+		/*ft_memcpy(void *dst, const void *src, size_t n)*/
+		else if (strcmp(argv[1], "ft_memcpy") == 0)
+		{
+			printf("original: %s\n", memcpy(argv[2], argv[3], (size_t)atoi(argv[4])));
+			printf("my funct: %s\n", ft_memcpy(argv[2], argv[3], (size_t)atoi(argv[4])));
+		}
+		/*ft_memmove(void *dst, const void *src, size_t len)*/
+		else if (strcmp(argv[1], "ft_memmove") == 0)
+		{
+			printf("original: %s\n", memmove(argv[2], argv[3], (size_t)atoi(argv[4])));
+		//	printf("my funct: %s\n", ft_memmove(argv[2], argv[3], (size_t)atoi(argv[4])));
+		}
+	}
+	else if (argc == 6)
+	{
+		/*ft_memccpy(void *dst, const void *src, int c, size_t n)*/
+		if (strcmp(argv[1], "ft_memccpy") == 0)
+		{
+			printf("original output: %s\noriginal dst: %s\n", memccpy(argv[2], argv[3], atoi(argv[4]), (size_t)atoi(argv[5])), argv[2]);
+			printf("my funct output: %s\nmy funct dst: %s\n", ft_memccpy(argv[2], argv[3], atoi(argv[4]), (size_t)atoi(argv[5])), argv[2]);
+		}
 	}
 	return (0);
 }
