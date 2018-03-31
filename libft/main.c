@@ -6,7 +6,7 @@
 /*   By: ikoloshy <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/26 20:40:26 by ikoloshy          #+#    #+#             */
-/*   Updated: 2018/03/30 22:52:37 by ikoloshy         ###   ########.fr       */
+/*   Updated: 2018/03/31 22:36:44 by ikoloshy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -103,6 +103,18 @@ int	main(int argc, char **argv)
 			printf("original: %s\n", strcpy(argv[2], argv[3]));
 			printf("my funct: %s\n", ft_strcpy(argv[2], argv[3]));
 		}
+		/*ft_strcat(char *s1, const char *s2)*/
+		else if (strcmp(argv[1], "ft_strcat") == 0)
+		{
+		//	printf("original: %s\n", strcat(argv[2], argv[3]));
+			printf("my fucnt: %s\n", ft_strcat(argv[2], argv[3]));
+		}
+		/*ft_strchr(const char *s, int c)*/
+		else if (strcmp(argv[1], "ft_strchr") == 0)
+		{
+			printf("original: %s\n", strchr(argv[2], (int)atoi(argv[3])));
+			printf("my funct: %s\n", ft_strchr(argv[2], (int)atoi(argv[3])));
+		}
 	}
 	else if (argc == 5)
 	{
@@ -125,6 +137,18 @@ int	main(int argc, char **argv)
 		{
 			printf("original: %s\n", memmove(argv[2], argv[3], (size_t)atoi(argv[4])));
 		//	printf("my funct: %s\n", ft_memmove(argv[2], argv[3], (size_t)atoi(argv[4])));
+		}
+		/*ft_strncpy(char *dst, const char *src, size_t len)*/
+		else if (strcmp(argv[1], "ft_strncpy") == 0)
+		{
+			printf("original: %s\n", strncpy(argv[2], argv[3], (size_t)atoi(argv[4])));
+			printf("my funct: %s\n", ft_strncpy(argv[2], argv[3], (size_t)atoi(argv[4])));
+		}
+		/*ft_strncat(char *s1, const char *s2, size_t n)*/
+		else if (strcmp(argv[1], "ft_strncat") == 0)
+		{
+			printf("original: %s\n", strncat(argv[2], argv[3], (size_t)atoi(argv[4])));
+			printf("my_funct: %s\n", ft_strncat(argv[2], argv[3], (size_t)atoi(argv[4])));
 		}
 	}
 	else if (argc == 6)
