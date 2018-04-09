@@ -6,7 +6,7 @@
 /*   By: ikoloshy <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/24 17:27:31 by ikoloshy          #+#    #+#             */
-/*   Updated: 2018/04/04 21:01:59 by ikoloshy         ###   ########.fr       */
+/*   Updated: 2018/04/09 16:28:42 by ikoloshy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,6 +44,7 @@ char	*ft_strrchr(const char *s, int c);
 char	*ft_strstr(const char *haystack, const char *needle);
 char	*ft_strsub(char const *s, unsigned int start, size_t len);
 char	*ft_strtrim(char const *s);
+char	**ft_strsplit(char const *s, char c);
 int		ft_atoi(const char *str);
 int		ft_isalpha(int c);
 int		ft_isalnum(int c);
@@ -59,5 +60,6 @@ int		ft_tolower(int c);
 int		ft_toupper(int c);
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize);
 size_t	ft_strlen(const char *s);
+size_t	ft_wordssplit(char const *s, char c);
 
 #endif
