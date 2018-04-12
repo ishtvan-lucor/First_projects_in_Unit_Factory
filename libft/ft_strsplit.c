@@ -6,7 +6,7 @@
 /*   By: ikoloshy <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/09 14:56:46 by ikoloshy          #+#    #+#             */
-/*   Updated: 2018/04/11 21:25:35 by ikoloshy         ###   ########.fr       */
+/*   Updated: 2018/04/12 17:26:57 by ikoloshy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ char	**ft_strsplit(char const *s, char c)
 	if (!s)
 		return (NULL);
 	words = ft_wordssplit(s, c);
-	if ((str = (char**)malloc(sizeof(**str) * (words + 1))) == NULL)
+	if (!(str = (char**)ft_memalloc(sizeof(char*) * (words + 1))))
 		return (str);
 	while (index < words)
 	{
@@ -36,5 +36,6 @@ char	**ft_strsplit(char const *s, char c)
 		sindex = sindex + ft_strclen(s, sindex, c);
 		index++;
 	}
+	str[words] = 0;
 	return (str);
 }

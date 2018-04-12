@@ -1,23 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memalloc.c                                      :+:      :+:    :+:   */
+/*   ft_intlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ikoloshy <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/03/27 19:00:52 by ikoloshy          #+#    #+#             */
-/*   Updated: 2018/04/09 16:24:00 by ikoloshy         ###   ########.fr       */
+/*   Created: 2018/04/12 17:28:08 by ikoloshy          #+#    #+#             */
+/*   Updated: 2018/04/12 17:50:31 by ikoloshy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memalloc(size_t size)
+size_t	ft_intlen(int n)
 {
-	void	*temp;
+	size_t	len;
 
-	if ((temp = (void*)malloc(sizeof(*temp) * size)) == NULL)
-		return (temp);
-	ft_bzero(temp, size);
-	return (temp);
+	len = 1;
+	if (n > 0)
+	{
+		len--;
+		n *= -1;
+	}
+	while (n < 0)
+	{
+		len++;
+		n /= 10;
+	}
+	return (len);
 }

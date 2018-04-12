@@ -1,23 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memalloc.c                                      :+:      :+:    :+:   */
+/*   ft_strclen.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ikoloshy <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/03/27 19:00:52 by ikoloshy          #+#    #+#             */
-/*   Updated: 2018/04/09 16:24:00 by ikoloshy         ###   ########.fr       */
+/*   Created: 2018/04/11 20:52:34 by ikoloshy          #+#    #+#             */
+/*   Updated: 2018/04/11 20:57:51 by ikoloshy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memalloc(size_t size)
+size_t	ft_strclen(char const *s, size_t start, char const c)
 {
-	void	*temp;
+	size_t	len;
 
-	if ((temp = (void*)malloc(sizeof(*temp) * size)) == NULL)
-		return (temp);
-	ft_bzero(temp, size);
-	return (temp);
+	len = 0;
+	while (s[start] != c && s[start++] != '\0')
+		len++;
+	return (len);
 }

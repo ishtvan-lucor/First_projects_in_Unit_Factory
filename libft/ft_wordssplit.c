@@ -1,23 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memalloc.c                                      :+:      :+:    :+:   */
+/*   ft_wordssplit.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ikoloshy <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/03/27 19:00:52 by ikoloshy          #+#    #+#             */
-/*   Updated: 2018/04/09 16:24:00 by ikoloshy         ###   ########.fr       */
+/*   Created: 2018/04/09 15:10:25 by ikoloshy          #+#    #+#             */
+/*   Updated: 2018/04/09 16:15:57 by ikoloshy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memalloc(size_t size)
+size_t	ft_wordssplit(char const *s, char c)
 {
-	void	*temp;
+	size_t	count;
 
-	if ((temp = (void*)malloc(sizeof(*temp) * size)) == NULL)
-		return (temp);
-	ft_bzero(temp, size);
-	return (temp);
+	count = 0;
+	while (*s != '\0')
+	{
+		if (*s != c)
+		{
+			while (*s != c && *s != '\0')
+				s++;
+			count++;
+		} else 
+			s++;
+	}
+	return (count);
 }
