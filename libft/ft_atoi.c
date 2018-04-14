@@ -6,32 +6,35 @@
 /*   By: ikoloshy <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/01 22:03:44 by ikoloshy          #+#    #+#             */
-/*   Updated: 2018/04/02 18:33:35 by ikoloshy         ###   ########.fr       */
+/*   Updated: 2018/04/14 18:59:36 by ikoloshy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
 int	ft_atoi(const char *str)
 {
-	int	res;
-	int flag;
+	long	res;
+	long	buff;
+	int 	flag;
 
-	flag = 0;
+	flag = 1;
 	res = 0;
 	while (*str == ' ' || (*str >= 9 && *str <= 13))
 		str++;
-	if (*str == '+')
-		str++;
-	else if (*str == '-')
-	{
-		str++;
+	if (*str == '-')
 		flag = -1;
-	}
+	if (*str == '+' || *str == '-')
+		str++;
 	while (*str >= '0' && *str <= '9')
 	{
+		buff = res;
 		res = res * 10 + (*str - '0');
+		if (buff > res && flag == -1)
+			return (0);
+		else if (buff > res && flag == 1)
+			return (-1);
 		str++;
 	}
-	if (flag)
-		res *= flag;
-	return (res);
+	return ((int)res * flag);
 }
