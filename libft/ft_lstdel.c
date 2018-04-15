@@ -6,7 +6,7 @@
 /*   By: ikoloshy <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/14 21:20:25 by ikoloshy          #+#    #+#             */
-/*   Updated: 2018/04/14 21:32:53 by ikoloshy         ###   ########.fr       */
+/*   Updated: 2018/04/15 14:44:32 by ikoloshy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	ft_lstdel(t_list **alst, void (*del)(void *, size_t))
 
 	if (alst == NULL || *alst == NULL)
 		return ;
-	if (*alst != NULL)
+	while (*alst != NULL)
 	{
 		temp = (*alst)->next;
 		ft_lstdelone(&(*alst), del);
