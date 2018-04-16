@@ -6,7 +6,7 @@
 /*   By: ikoloshy <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/14 14:01:23 by ikoloshy          #+#    #+#             */
-/*   Updated: 2018/04/15 14:41:25 by ikoloshy         ###   ########.fr       */
+/*   Updated: 2018/04/16 18:07:32 by ikoloshy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,9 @@ void	ft_putnbr_fd(int n, int fd)
 	else if (n == -2147483648)
 		ft_putstr_fd("-2147483648", fd);
 	else
-	{	
+	{
 		if (n < 0)
-		{	
+		{
 			ft_putchar_fd('-', fd);
 			n *= -1;
 		}

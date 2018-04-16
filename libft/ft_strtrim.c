@@ -6,7 +6,7 @@
 /*   By: ikoloshy <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/04 20:14:39 by ikoloshy          #+#    #+#             */
-/*   Updated: 2018/04/09 14:21:22 by ikoloshy         ###   ########.fr       */
+/*   Updated: 2018/04/16 18:21:22 by ikoloshy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,4 +28,4 @@ char	*ft_strtrim(char const *s)
 	while (s[len] == ' ' || s[len] == '\t' || s[len] == '\n')
 		len--;
 	return (ft_strsub(s, index, (len - (size_t)index + 1)));
-} 
+}

@@ -6,7 +6,7 @@
 #    By: ikoloshy <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/03/24 17:36:13 by ikoloshy          #+#    #+#              #
-#    Updated: 2018/04/14 21:48:43 by ikoloshy         ###   ########.fr        #
+#    Updated: 2018/04/15 12:39:18 by ikoloshy         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,7 +22,7 @@ SRC = ft_putchar.c ft_putstr.c ft_bzero.c ft_memalloc.c ft_memdel.c ft_strnew.c 
 	  ft_wordssplit.c ft_strclen.c ft_strsplit.c ft_intlen.c ft_putchar_fd.c \
 	  ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c ft_putnbr.c ft_striter.c \
 	  ft_striteri.c ft_strmap.c ft_strmapi.c ft_lstnew.c ft_lstdelone.c \
-	  ft_lstdel.c ft_lstadd.c ft_lstiter.c
+	  ft_lstdel.c ft_lstadd.c ft_lstiter.c ft_lstmap.c ft_lstswap.c ft_realloc.c
 OFL = ft_putchar.o ft_putstr.o ft_bzero.o ft_memalloc.o ft_memdel.o ft_strnew.o \
 	  ft_strdel.o ft_strclr.o ft_strequ.o ft_strnequ.o ft_memset.o ft_memcpy.o \
 	  ft_memccpy.o ft_strlen.o ft_strcpy.o ft_strncpy.o ft_strcat.o ft_strncat.o \
@@ -33,7 +33,7 @@ OFL = ft_putchar.o ft_putstr.o ft_bzero.o ft_memalloc.o ft_memdel.o ft_strnew.o 
 	  ft_wordssplit.o ft_strclen.o ft_strsplit.o ft_intlen.o ft_putchar_fd.o \
 	  ft_putstr_fd.o ft_putendl_fd.o ft_putnbr_fd.o ft_putnbr.o ft_striter.o \
 	  ft_striteri.o ft_strmap.o ft_strmapi.o ft_lstnew.o ft_lstdelone.o \
-	  ft_lstdel.o ft_lstadd.o ft_lstiter.o
+	  ft_lstdel.o ft_lstadd.o ft_lstiter.o ft_lstmap.o ft_lstswap.o ft_realloc.o
 HDR = includes/
 FLAG = -Wall -Wextra -Werror
 

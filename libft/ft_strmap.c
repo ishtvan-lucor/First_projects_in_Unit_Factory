@@ -6,7 +6,7 @@
 /*   By: ikoloshy <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/14 16:58:48 by ikoloshy          #+#    #+#             */
-/*   Updated: 2018/04/14 17:13:21 by ikoloshy         ###   ########.fr       */
+/*   Updated: 2018/04/16 18:10:26 by ikoloshy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ char	*ft_strmap(char const *s, char (*f)(char))
 	index = 0;
 	if (!s)
 		return (NULL);
-	if(!(temp = ft_strnew(ft_strlen(s))))
+	if (!(temp = ft_strnew(ft_strlen(s))))
 		return (NULL);
 	while (s[index] != '\0')
 	{

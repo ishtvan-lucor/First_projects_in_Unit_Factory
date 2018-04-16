@@ -6,7 +6,7 @@
 /*   By: ikoloshy <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/09 15:10:25 by ikoloshy          #+#    #+#             */
-/*   Updated: 2018/04/09 16:15:57 by ikoloshy         ###   ########.fr       */
+/*   Updated: 2018/04/16 18:36:11 by ikoloshy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,8 @@ size_t	ft_wordssplit(char const *s, char c)
 			while (*s != c && *s != '\0')
 				s++;
 			count++;
-		} else 
+		}
+		else
 			s++;
 	}
 	return (count);

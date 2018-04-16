@@ -6,7 +6,7 @@
 /*   By: ikoloshy <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/01 22:03:44 by ikoloshy          #+#    #+#             */
-/*   Updated: 2018/04/14 18:59:36 by ikoloshy         ###   ########.fr       */
+/*   Updated: 2018/04/16 18:29:14 by ikoloshy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ int	ft_atoi(const char *str)
 {
 	long	res;
 	long	buff;
-	int 	flag;
+	int		flag;
 
 	flag = 1;
 	res = 0;

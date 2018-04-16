@@ -6,7 +6,7 @@
 /*   By: ikoloshy <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/09 14:56:46 by ikoloshy          #+#    #+#             */
-/*   Updated: 2018/04/12 17:26:57 by ikoloshy         ###   ########.fr       */
+/*   Updated: 2018/04/16 18:17:25 by ikoloshy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,10 +16,10 @@ char	**ft_strsplit(char const *s, char c)
 {
 	char	**str;
 	size_t	words;
-	size_t	sindex;
+	size_t	si;
 	size_t	index;
 
-	sindex = 0;
+	si = 0;
 	index = 0;
 	if (!s)
 		return (NULL);
@@ -28,12 +28,12 @@ char	**ft_strsplit(char const *s, char c)
 		return (str);
 	while (index < words)
 	{
-		while (s[sindex] == c)
-			sindex++;
-		str[index] = ft_strsub(s, (unsigned int)sindex, ft_strclen(s, sindex, c));
+		while (s[si] == c)
+			si++;
+		str[index] = ft_strsub(s, (unsigned int)si, ft_strclen(s, si, c));
 		if (str[index] == NULL)
 			return (NULL);
-		sindex = sindex + ft_strclen(s, sindex, c);
+		si = si + ft_strclen(s, si, c);
 		index++;
 	}
 	str[words] = 0;

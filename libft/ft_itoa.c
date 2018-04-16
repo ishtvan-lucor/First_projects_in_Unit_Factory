@@ -6,7 +6,7 @@
 /*   By: ikoloshy <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/09 15:37:14 by ikoloshy          #+#    #+#             */
-/*   Updated: 2018/04/12 18:22:09 by ikoloshy         ###   ########.fr       */
+/*   Updated: 2018/04/16 18:01:27 by ikoloshy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ char	*ft_itoa(int n)
 {
 	char	*str;
 	size_t	index;
-	
+
 	index = ft_intlen(n);
 	if (!(str = ft_strnew(index)))
 		return (str);
@@ -24,7 +24,7 @@ char	*ft_itoa(int n)
 		str[0] = '0';
 	else if (n < 0)
 		str[0] = '-';
-	else 
+	else
 		n *= -1;
 	while (n < 0)
 	{
