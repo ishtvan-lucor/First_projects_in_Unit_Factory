@@ -1,0 +1,2 @@
+# https://www.whoishostingthis.com/?q=slash16.org we could specific sites or
+whois 52.84.197.107 | grep "OrgName" | awk '{print $2 " " $4}'

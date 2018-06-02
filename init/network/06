@@ -1,0 +1,2 @@
+cat /var/run/resolv.conf
+scutil --dns | grep nameserver | tail -1 | cut -d ' ' -f 5
