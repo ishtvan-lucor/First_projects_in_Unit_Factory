@@ -1,0 +1,4 @@
+~/.ssh/authorized_keys
+# ssh-keygen
+# public key here -> /root/.ssh/id_rsa.pub
+#https://help.ubuntu.com/lts/serverguide/openssh-server.html.en

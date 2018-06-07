@@ -1,0 +1,3 @@
+#cat /var/run/sshd.pid
+pidof sshd
+#pgrep sshd

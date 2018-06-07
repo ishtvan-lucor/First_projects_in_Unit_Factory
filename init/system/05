@@ -1,0 +1,2 @@
+sudo service ssh status
+#install ssh: sudo apt-get install ssh

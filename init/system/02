@@ -1,0 +1,2 @@
+sudo hostname new_name
+#than update  new_name in /etc/hostname and /etc/hosts
