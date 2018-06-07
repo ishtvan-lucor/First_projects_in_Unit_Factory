@@ -1,2 +1,2 @@
-networksetup -getmacaddress "Bluetooth PAN" | cut -d ' ' -f 2
+networksetup -getmacaddress "Bluetooth PAN" | cut -d ' ' -f 3
 # networksetup -listallhardwareports - a list of all the network interfaces with their MAC addresses
