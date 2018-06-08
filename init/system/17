@@ -1,0 +1,2 @@
+iptables -L
+# https://www.opennet.ru/docs/RUS/iptables/ 6.3 punkt

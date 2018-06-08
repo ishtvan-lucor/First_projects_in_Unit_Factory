@@ -1,0 +1,2 @@
+iptables -A INPUT DROP 
+iptables -A OUTPUT DROP
