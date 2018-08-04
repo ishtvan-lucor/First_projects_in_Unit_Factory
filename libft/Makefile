@@ -6,7 +6,7 @@
 #    By: ikoloshy <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/03/24 17:36:13 by ikoloshy          #+#    #+#              #
-#    Updated: 2018/04/15 12:39:18 by ikoloshy         ###   ########.fr        #
+#    Updated: 2018/06/11 17:15:57 by ikoloshy         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -40,17 +40,17 @@ FLAG = -Wall -Wextra -Werror
 all: $(NAME)
 
 $(NAME):
-	@gcc $(FLAG) -I $(HDR) -c $(SRC)
-	@ar rc $(LIB) $(OFL)
+	gcc $(FLAG) -I $(HDR) -c $(SRC)
+	ar rc $(LIB) $(OFL)
 
 main: all
-	@gcc $(FLAG) -o $(NAME) main.c -I $(HDR) -L. -lft
+	gcc $(FLAG) -o $(NAME) main.c -I $(HDR) -L. -lft
 
 clean:
-	@/bin/rm -f $(OFL)
+	/bin/rm -f $(OFL)
 
 fclean: clean
-	@/bin/rm -f $(NAME) $(LIB)
+	/bin/rm -f $(NAME) $(LIB)
 
 re: fclean all
 
