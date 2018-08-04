@@ -1,3 +1,11 @@
 # !bin/bash
+
+crontab -l > temp
 echo "0 0 * * * \
-:"
+old=\"\$(cat /etc/crontab.sum)\" && \
+cur=\"\$(md5sum /etc/crontab | awk '{print \$1}')\" && \
+if ['\$old' != '\$cur'] ; then \
+	md5sum /etc/crontab | awk '{print \$1}' >/etc/crontab.sum && \
+	echo '/etc/crontab was modified' | mail -s '/etc/crontab was modified' root ; fi" >> temp
+crontab temp
+rm temp 
