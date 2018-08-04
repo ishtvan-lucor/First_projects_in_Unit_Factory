@@ -6,7 +6,7 @@
 /*   By: ikoloshy <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/28 19:29:53 by ikoloshy          #+#    #+#             */
-/*   Updated: 2018/05/30 18:54:11 by ikoloshy         ###   ########.fr       */
+/*   Updated: 2018/06/15 16:56:34 by ikoloshy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,5 +85,6 @@ int				get_next_line(const int fd, char **line)
 	}
 	if (*line[0] != '\0')
 		return (1);
+	free (line);
 	return (0);
 }
