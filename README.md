@@ -23,3 +23,25 @@ My first projects during the education in Unit Factory by 42 school methodology.
 Projects Piscine Reloaded(1) and init(5) not full-fledged programs.  Soon will be add a subject to this project.
 
 The projects Libft(2), Fillit(3) and Get_Next_Line(4) supported by Makefile and where is needed by main.c file to check.
+Makefile suported the next command: make all, clean, fclean, re.
+
+Usage(in command line):
++ make
++ (if compile libft with main.c libft: gcc -o test main.c libft.a)
++ ./name_project argument**
+
+** Libft arguments: first is name of function, next the argument/arguments of function 
++ Exemple: ./test ft_putchar A
++ Warning: in error case, it will print a list of available functions prototypes
+
+** Get_Next_Line argument: only the file that need to read
++ Exemple: ./get_next_line name_file_with_text
+       
+** Fillit argument: only the file with Tetriminos
++ Exemple: ./fillit name_file_with_Tetriminos
+       
+'*' Tetriminos must respect the following rules :
++ Precisely 4 lines of 4 characters, each followed by a new line (well... a 4x4 square).
++ A Tetrimino is a classic piece of Tetris composed of 4 blocks.
++ Each character must be either a block character(’#’ ) or an empty character (’.’).
++ Each block of a Tetrimino must touch at least one other block on any of his 4 sides (up, down, left and right).
