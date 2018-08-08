@@ -6,7 +6,7 @@
 /*   By: ikoloshy <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/26 20:40:26 by ikoloshy          #+#    #+#             */
-/*   Updated: 2018/06/02 19:38:05 by ikoloshy         ###   ########.fr       */
+/*   Updated: 2018/08/08 17:20:26 by ikoloshy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -164,7 +164,7 @@ int	main(int argc, char **argv)
 	}
 	else if (argc == 4)
 	{
-		/* ft_bzero(void *s, size_t n);*/
+		/* ft_bzero(void *s, size_t n)*/
 		if (strcmp(argv[1], "ft_bzero") == 0)
 		{
 			//bzero(argv[2], (size_t)atoi(argv[3]));
@@ -242,6 +242,7 @@ int	main(int argc, char **argv)
 		/*ft_strnequ(char const *s1, char const *s2, size_t n)*/
 		if (strcmp(argv[1], "ft_strnequ") == 0)
 			printf("Result: %d\n", ft_strnequ(argv[2], argv[3], (size_t)atoi(argv[4])));
+		/*ft_memset(void *b, int c, size_t len)*/
 		else if (strcmp(argv[1], "ft_memset") == 0)
 		{
 			printf("original:%s\n", memset(argv[2], (int)atoi(argv[3]), (size_t)atoi(argv[4])));
@@ -315,6 +316,60 @@ int	main(int argc, char **argv)
 			printf("original output: %s\noriginal dst: %s\n", memccpy(argv[2], argv[3], atoi(argv[4]), (size_t)atoi(argv[5])), argv[2]);
 			printf("my funct output: %s\nmy funct dst: %s\n", ft_memccpy(argv[2], argv[3], atoi(argv[4]), (size_t)atoi(argv[5])), argv[2]);
 		}
+	}
+	else
+	{
+	
+		printf("Bad usage!\n\
+			Prototypes of available functions:\n\
+			ft_putchar(char c)\n\
+			ft_putstr(char const *s)\n\
+			ft_memalloc(size_t size)\n\
+			ft_memdel(void **ap)\n\
+			ft_strdel(char **as)\n\
+			ft_strnew(size_t size)\n\
+			ft_strclr(char *s)\n\
+			ft_strlen(const char *s)\n\
+			ft_atoi(const char *str)\n\
+			ft_isalpha(int c)\n\
+			ft_isdigit(int c)\n\
+			ft_isalnum(int c)\n\
+			ft_isascii(int c)\n\
+			ft_isprint(int c)\n\
+			ft_toupper(int c)\n\
+			ft_tolower(int c)\n\
+			ft_strdup(const char *s1)\n\
+			ft_putendl(char const *s)\n\
+			ft_strtrim(char const *s)\n\
+			ft_intlen(int n)\n\
+			ft_itoa(int n)\n\
+			ft_putnbr(int n)\n\
+			ft_striter(char *s, void (*f)(char *)) - the second parametr will given by default (function ft_strclr)\n\
+			ft_bzero(void *s, size_t n)\n\
+			ft_strequ(char const *s1, char const *s2)\n\
+			ft_strcpy(char *dst, const char *src)\n\
+			ft_strcat(char *s1, const char *s2)\n\
+			ft_strchr(const char *s, int c)\n\
+			ft_strrchr(const char *s, int c)\n\
+			ft_strcmp(const char *s1, const char *s2)\n\
+			ft_strstr(const char *haystack, const char *needle)\n\
+			ft_strjoin(char const *s1, char const *s2)\n\
+			ft_wordssplit(char const *s, char c)\n\
+			ft_strsplit(char const *s, char c)\n\
+			ft_lstnew(void const *content, size_t content_size)\n\
+			ft_strnequ(char const *s1, char const *s2, size_t n)\n\
+			ft_memset(void *b, int c, size_t len)\n\
+			ft_memcpy(void *dst, const void *src, size_t n)\n\
+			ft_memmove(void *dst, const void *src, size_t len)\n\
+			ft_strncpy(char *dst, const char *src, size_t len)\n\
+			ft_strncat(char *s1, const char *s2, size_t n)\n\
+			ft_strncmp(const char *s1, const char *s2, size_t n)\n\
+			ft_strnstr(const char *haystack, const char *needle, size_t len)\n\
+			ft_memchr(const void *s, int c, size_t n)\n\
+			ft_memcmp(const void *s1, const void *s2, size_t n)\n\
+			ft_strlcat(char *dst, const char *src, size_t dstsize)\n\
+			ft_strsub(char const *s, unsigned int start, size_t len)\n\
+			ft_memccpy(void *dst, const void *src, int c, size_t n)\n");
 	}
 	return (0);
 }
