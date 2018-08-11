@@ -85,6 +85,5 @@ int				get_next_line(const int fd, char **line)
 	}
 	if (*line[0] != '\0')
 		return (1);
-	free (line);
 	return (0);
 }
