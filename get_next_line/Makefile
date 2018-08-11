@@ -14,7 +14,7 @@ NAME = gnl
 FLAGS = -Wall -Wextra -Werror
 SOURCE = main.c \
 			get_next_line.c
-HEADER = fget_next_line.h
+HEADER = get_next_line.h
 OBJECTS = $(SOURCE:.c=.o)
 FILLLIB = gnl.a
 LIBFT = libft/libft.a
