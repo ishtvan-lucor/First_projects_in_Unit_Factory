@@ -14,16 +14,16 @@ My first projects during the education in Unit Factory by 42 school methodology.
     + Part 3 - Bonus part: ft_lstnew, ft_lstdelone, ft_lstdel, ft_lstadd, ft_lstiter, ft_lstmap, ft_wordssplit, ft_realloc,
       ft_lstswap, ft_strclen, ft_intlen.
       
-3. Fillit - is a program that will take a file as parameter, which contains a list of Tetriminos*, and arrange them in order to create the smallest square possible. And it's a paired project.
+3. Fillit - is a program that will take a file as parameter, which contains a list of Tetriminos*, and arrange them in order to create the smallest square possible.
 
-4. Get_Next_Line - a function that will allow to read a line ending with a newline character from a file descriptor.
+4. Get_Next_Line - a function that will allow to read a line from a file by using file descriptor.
 
 5. init - this project about learning system and network basic commands, many of the services used on a server machine, as well as a few ideas of scripts that can be useful for SysAdmins on a daily basis.
 
-Projects Piscine Reloaded(1) and init(5) not full-fledged programs.  Soon will be add a subject to this project.
+Projects Piscine Reloaded(1) and init(5) not full-fledged programs.
 
 The projects Libft(2), Fillit(3) and Get_Next_Line(4) supported by Makefile and where is needed by main.c file to check.
-Makefile suported the next command: make all, clean, fclean, re.
+Makefile supported the next targets: make all, clean, fclean, re.
 
 Usage(in command line):
 + make
@@ -31,17 +31,17 @@ Usage(in command line):
 + ./name_project argument**
 
 ** Libft arguments: first is name of function, next the argument/arguments of function 
-+ Exemple: ./test ft_putchar A
++ Example: ./test ft_putchar A
 + Warning: in error case, it will print a list of available functions prototypes
 
 ** Get_Next_Line argument: only the file that need to read
-+ Exemple: ./get_next_line name_file_with_text
++ Example: ./get_next_line file
        
 ** Fillit argument: only the file with Tetriminos
-+ Exemple: ./fillit name_file_with_Tetriminos
++ Example: ./fillit ile_with_Tetriminos
        
 '*' Tetriminos must respect the following rules :
-+ Precisely 4 lines of 4 characters, each followed by a new line (well... a 4x4 square).
++ Precisely 4 lines of 4 characters, each followed by a new line (4x4 square).
 + A Tetrimino is a classic piece of Tetris composed of 4 blocks.
-+ Each character must be either a block character(’#’ ) or an empty character (’.’).
-+ Each block of a Tetrimino must touch at least one other block on any of his 4 sides (up, down, left and right).
++ Each character must be representedby a block character(’#’ ) or an empty character (’.’).
++ Each block with Tetrimino must be separated by a newline.
