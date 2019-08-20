@@ -25,10 +25,10 @@ Projects Piscine Reloaded(1) and init(5) not full-fledged programs.
 The projects Libft(2), Fillit(3) and Get_Next_Line(4) supported by Makefile and where is needed by main.c file to check.
 Makefile supported the next targets: make all, clean, fclean, re.
 
-Usage(in command line):
+Usage:
 + make
 + (if compile libft with main.c libft: gcc -o test main.c libft.a)
-+ ./name_project argument**
++ ./project_name argument**
 
 ** Libft arguments: first is name of function, next the argument/arguments of function 
 + Example: ./test ft_putchar A
